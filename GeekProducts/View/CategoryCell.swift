@@ -12,6 +12,12 @@ class CategoryCell: UITableViewCell {
     
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
+    
+    func updateViews(category: Category) {
+        categoryImage.image = UIImage(named: category.imageName)
+        categoryLabel.text = category.title
+    }
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
