@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHOP BY CATEGORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aab-dQ-xb5">
-                                <rect key="frame" x="10" y="30" width="165" height="23.5"/>
+                                <rect key="frame" x="20" y="30" width="165" height="23.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23.5" id="1v8-56-KaX"/>
                                     <constraint firstAttribute="width" constant="165" id="T87-64-H4M"/>
@@ -84,24 +84,24 @@
                             <constraint firstItem="zi9-Ms-55c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wk0-12-o7w"/>
                             <constraint firstItem="aab-dQ-xb5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Y1e-HK-z3d"/>
                             <constraint firstItem="zi9-Ms-55c" firstAttribute="top" secondItem="aab-dQ-xb5" secondAttribute="bottom" constant="16" id="gaa-rV-7ge"/>
-                            <constraint firstItem="aab-dQ-xb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lha-44-j7F"/>
+                            <constraint firstItem="aab-dQ-xb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lha-44-j7F"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Geek Products" id="MAS-Ab-T2g"/>
                     <connections>
                         <outlet property="categoryTable" destination="zi9-Ms-55c" id="sOi-Wz-ic8"/>
-                        <segue destination="Rvh-fJ-NG4" kind="show" id="V75-kD-g7D"/>
+                        <segue destination="Rvh-fJ-NG4" kind="show" identifier="ProductsVC" id="V75-kD-g7D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="477.60000000000002" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductsVC-->
         <scene sceneID="DRO-Z8-vRJ">
             <objects>
-                <viewController id="Rvh-fJ-NG4" sceneMemberID="viewController">
+                <viewController id="Rvh-fJ-NG4" customClass="ProductsVC" customModule="GeekProducts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="og3-M8-ElW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +126,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JJb-A9-fW2" customClass="ProductCell" customModule="GeekProducts" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="JJb-A9-fW2" customClass="ProductCell" customModule="GeekProducts" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="273"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -190,6 +190,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fU7-f8-2CX"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="rJW-ya-sIc" id="fLu-WF-9tU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59t-XW-N7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
